@@ -18,7 +18,7 @@
 
 ### 🌐 [helios website →](https://basionwang-bot.github.io/helios/) · 📦 [Download Helios.app →](https://github.com/basionwang-bot/helios/releases/latest)
 
-Unzip, drag to Applications, **right-click → Open** · no Homebrew, no dependencies
+Unzip, drag to Applications, **double-click to open** · signed &amp; notarized · no Homebrew, no dependencies
 
 <img src="assets/hero.png" width="880" alt="Helios — two agents side by side in split panes" />
 
@@ -72,7 +72,7 @@ Running one AI agent in a terminal is easy. Running **five** — across differen
 
 1. Download **`Helios.app.zip`** from the [latest release](https://github.com/basionwang-bot/helios/releases/latest).
 2. Unzip and drag **Helios** to `/Applications`.
-3. First launch: **right-click Helios → Open → Open**.
+3. Double-click to open. The app is **signed with a Developer ID and notarized by Apple**, so it launches with no Gatekeeper warning.
 
 That's it — no Homebrew, no dependencies. Everything the terminal needs is inside the app bundle.
 

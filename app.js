@@ -75,7 +75,7 @@ const I18N = {
     "dl.c4": "Local-only: no telemetry, no cloud, no account",
     "dl.c5": "Everything bundled — no Homebrew, no deps",
     "dl.c6": "macOS 13 (Ventura) or later",
-    "dl.note": "First launch: right-click Helios → Open → Open (ad-hoc signed, not notarized).",
+    "dl.note": "Signed &amp; notarized by Apple — just double-click to open.",
 
     "faq.title": "Questions &amp; answers",
     "faq.q1": "Which agents does it work with?",
@@ -172,7 +172,7 @@ const I18N = {
     "dl.c4": "纯本地:零遥测、不上云、无账号",
     "dl.c5": "全部内置 —— 不需要 Homebrew,不需要任何依赖",
     "dl.c6": "需 macOS 13 (Ventura) 及以上",
-    "dl.note": "首次打开:右键 Helios → 打开 → 打开(ad-hoc 签名,未公证)。",
+    "dl.note": "已通过 Apple 签名与公证 —— 双击即可打开。",
 
     "faq.title": "常见问题",
     "faq.q1": "支持哪些 agent?",

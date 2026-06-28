@@ -18,7 +18,7 @@
 
 ### 🌐 [访问官网 →](https://basionwang-bot.github.io/helios/) · 📦 [下载 Helios.app →](https://github.com/basionwang-bot/helios/releases/latest)
 
-解压、拖进应用程序、**右键 → 打开** · 不需要 Homebrew,不需要任何依赖
+解压、拖进应用程序、**双击打开** · 已签名并公证 · 不需要 Homebrew,不需要任何依赖
 
 <img src="assets/hero.png" width="880" alt="Helios —— 两个 agent 在分屏里并排运行" />
 
@@ -65,7 +65,7 @@
 
 1. 从[最新发布](https://github.com/basionwang-bot/helios/releases/latest)下载 **`Helios.app.zip`**。
 2. 解压,把 **Helios** 拖到 `/Applications`。
-3. 首次打开:**右键 Helios → 打开 → 打开**。
+3. 双击打开。应用已用 **Developer ID 签名并通过 Apple 公证**,不会再被 Gatekeeper 拦截。
 
 就这样 —— 不需要 Homebrew,不需要任何依赖。终端所需的一切都在应用包里。
 

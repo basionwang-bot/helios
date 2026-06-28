@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Helios — a native macOS terminal for AI coding agents</title>
+  <meta name="description" content="A native macOS terminal for running AI coding agents. Sessions that never die, a dashboard sidebar, split panes, parallel git worktrees, one-tap presets, and Sessions MCP. Native Swift, powered by libghostty. Free." />
+  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#1a1a20" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Helios — a native macOS terminal for AI coding agents" />
+  <meta property="og:description" content="Sessions that never die. A dashboard, not a tab bar. Native Swift, powered by libghostty." />
+  <meta property="og:image" content="assets/screenshot.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" type="image/png" href="assets/icon.png" />
+  <link rel="apple-touch-icon" href="assets/icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/icon.png" alt="Helios" />
+      Helios
+    </a>
+    <nav class="nav-links">
+      <a class="link" href="#features">Features</a>
+      <a class="link" href="#mcp">Sessions MCP</a>
+      <a class="link" href="#why">Why Helios</a>
+      <a class="link" href="#download">Download</a>
+      <a class="btn btn-ghost" href="#download">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Download for Mac
+      </a>
+    </nav>
+  </div>
+</header>
+
+<a id="top"></a>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="dot"></span> Native macOS · Apple Silicon · free</div>
+    <h1 class="hero-title">The native macOS terminal for <span class="grad-text">AI&nbsp;coding agents</span>.</h1>
+    <p class="hero-sub">Run five agents at once without losing the thread. Sessions live outside the window, so quitting never kills them — and the sidebar reads like a dashboard. Native Swift, powered by libghostty.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://github.com/basionwang-bot/helios/releases/latest/download/Helios.app.zip">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.9c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.8-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .7 1.1 1.6 2.3 2.8 2.3 1.1 0 1.5-.7 2.9-.7 1.3 0 1.7.7 2.9.7 1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.3-.9-2.3-3.4zM14.2 6.3c.6-.8 1-1.8.9-2.9-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.7-1 2.7 1 .1 2-.5 2.7-1.1z"/></svg>
+        Download for Mac
+      </a>
+      <a class="btn btn-ghost" href="#features">See how it works</a>
+    </div>
+    <p class="hero-note">Free · no account · no telemetry · ~8&nbsp;MB · macOS 13 (Ventura) or later</p>
+
+    <div class="hero-shot">
+      <img src="assets/screenshot.png" alt="Helios — project-centric sidebar with live agent status" />
+    </div>
+  </div>
+</section>
+
+<!-- ===================== AGENT STRIP ===================== -->
+<section class="agents" style="padding-top:24px">
+  <div class="wrap">
+    <div class="label">All your agents, in one place</div>
+    <div class="agents-row">
+      <span class="chip">Claude Code</span>
+      <span class="chip">Codex</span>
+      <span class="chip">Gemini</span>
+      <span class="chip">Amp</span>
+      <span class="chip">OpenCode</span>
+      <span class="chip">Cursor</span>
+      <span class="chip">+ any CLI</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURE GRID ===================== -->
+<section id="features">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Built for the way you actually run agents.</h2>
+      <p>Not a chat wrapper. A real terminal with a dashboard wrapped around it.</p>
+    </div>
+    <div class="grid">
+
+      <div class="card">
+        <div class="ic">🛰</div>
+        <h3>Terminals that never die.</h3>
+        <p>Every session runs in a background daemon, not the window. Quit it, crash it, relaunch it — your agents keep working. The daemon even remembers sessions on disk, so a reboot brings them back.</p>
+      </div>
+
+      <div class="card">
+        <div class="ic">👀</div>
+        <h3>A dashboard, not a tab bar.</h3>
+        <p>One colored dot tells you the state of every agent — no reading logs to know what's happening.</p>
+        <div class="dots">
+          <span><i class="d-amber"></i> Busy</span>
+          <span><i class="d-green"></i> Done</span>
+          <span><i class="d-red"></i> Needs you</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="ic">🔲</div>
+        <h3>Split panes.</h3>
+        <p>Watch up to four sessions side by side in one window (<code>⌘D</code>). Each pane is a full terminal with its own focus ring; the grid reflows as you resize.</p>
+      </div>
+
+      <div class="card">
+        <div class="ic">📁</div>
+        <h3>One folder, one project.</h3>
+        <p>Add a project folder once and it stays pinned — with its git branch and a roll-up of how many agents are running inside. The sidebar is a project manager, not a flat list.</p>
+      </div>
+
+      <div class="card">
+        <div class="ic">🌿</div>
+        <h3>Parallel agents, one repo.</h3>
+        <p>Built-in git worktrees let multiple agents work the same project on separate branches without stepping on each other — grouped under the project.</p>
+      </div>
+
+      <div class="card">
+        <div class="ic">⚡</div>
+        <h3>Quick presets.</h3>
+        <p>Launch Claude, Codex, Gemini and friends with the right command in one click. Hover a project, hit ＋, pick a harness.</p>
+      </div>
+
+      <div class="card">
+        <div class="ic">🔔</div>
+        <h3>It taps you.</h3>
+        <p>A macOS notification and a Dock badge the moment an agent needs your answer or finishes. It taps you; you don't babysit it.</p>
+      </div>
+
+      <div class="card">
+        <div class="ic">⌘</div>
+        <h3>Command palette.</h3>
+        <p>Press <code>⌘K</code> to fuzzy-jump to any session, project, or action, Spotlight-style.</p>
+      </div>
+
+      <div class="card">
+        <div class="ic">🎨</div>
+        <h3>500+ themes.</h3>
+        <p>Switch themes live from Settings with instant preview — no restart. Plus font, line-height, cursor and opacity. The window chrome stays seamless.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SESSIONS MCP ===================== -->
+<section id="mcp">
+  <div class="wrap">
+    <div class="feature-row">
+      <div>
+        <div class="eyebrow" style="margin-bottom:18px"><span class="dot" style="background:var(--blue);box-shadow:0 0 10px var(--blue)"></span> Sessions MCP</div>
+        <h2>One agent can drive another.</h2>
+        <p>Helios ships a local Model Context Protocol server for session control. It gives any session a safe way to inspect and drive its siblings: read output, type a prompt, answer menus, even start and close whole sessions.</p>
+        <p>That's how one orchestrator can run a fleet of agents while you stay out of the keystroke-by-keystroke loop — scoped to your project by default, and you can turn it off entirely.</p>
+        <div class="kvs">
+          <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Read a sibling's output and reply on its behalf</div>
+          <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Hand off a task between harnesses</div>
+          <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Project-scoped and fully optional</div>
+        </div>
+      </div>
+      <div class="shot">
+        <img src="assets/palette.png" alt="Command palette and session control" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ALWAYS RUNNING ===================== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="feature-row rev">
+      <div>
+        <h2>Close the window. Your agents keep working.</h2>
+        <p>Every session runs in its own hosted process, so it survives quitting the window. A menu-bar item keeps a live pulse on all of them — grouped by project, one click away. Pick one and Helios snaps the window back open, right to that session.</p>
+        <div class="kvs">
+          <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Sessions persisted to disk — survive a reboot</div>
+          <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Menu-bar roster with live status</div>
+          <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Reattach instantly, right where you left off</div>
+        </div>
+      </div>
+      <div class="shot">
+        <img src="assets/popover.png" alt="Menu-bar roster" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== THEMES ===================== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="feature-row">
+      <div>
+        <h2>Make it yours.</h2>
+        <p>500+ built-in themes, switchable live with instant preview. Dial in the font, size, line-height, cursor style and window opacity — and the whole window chrome follows your theme so nothing looks bolted on.</p>
+        <div class="kvs">
+          <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Live theme switching, no restart</div>
+          <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Full Unicode &amp; IME — type Chinese, Japanese, …</div>
+          <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> GPU-rendered, light on battery and RAM</div>
+        </div>
+      </div>
+      <div class="shot">
+        <img src="assets/settings.png" alt="Settings — themes and appearance" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== WHY ===================== -->
+<section id="why" class="why">
+  <div class="wrap">
+    <p class="big">The future of AI-assisted work isn't one model or one harness. It's many, working together.</p>
+    <p class="body">Claude for deep reasoning. Codex for code. Fast local models for the cheap, private work. And whatever lands next. Each is brilliant at something different, and betting everything on one is a bet you'll lose.</p>
+    <p class="body">Helios is the calm place that sits between them. Run every agent side by side, let Sessions MCP wire them together, and stop juggling windows and copy-pasting between tools. One terminal where every harness is a teammate — and they can actually talk to each other.</p>
+  </div>
+</section>
+
+<!-- ===================== DOWNLOAD ===================== -->
+<section id="download" style="padding-top:0">
+  <div class="wrap">
+    <div class="download">
+      <div class="price grad-text">Free.</div>
+      <p class="free-sub">No account. No telemetry. No cloud. Just a fast native app.</p>
+      <a class="btn btn-primary" href="https://github.com/basionwang-bot/helios/releases/latest/download/Helios.app.zip">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.9c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.8-3-.8-1.5 0-2.9.9-3.7 2.3-1.6 2.7-.4 6.8 1.1 9 .7 1.1 1.6 2.3 2.8 2.3 1.1 0 1.5-.7 2.9-.7 1.3 0 1.7.7 2.9.7 1.2 0 1.9-1.1 2.6-2.2.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.3-.9-2.3-3.4zM14.2 6.3c.6-.8 1-1.8.9-2.9-.9 0-2 .6-2.6 1.3-.6.7-1.1 1.7-1 2.7 1 .1 2-.5 2.7-1.1z"/></svg>
+        Download Helios for Mac
+      </a>
+      <div class="checklist">
+        <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Native macOS app for Apple Silicon</div>
+        <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Unlimited sessions, projects &amp; worktrees</div>
+        <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Sessions MCP &amp; quick presets included</div>
+        <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Local-only: no telemetry, no cloud, no account</div>
+        <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> Everything bundled — no Homebrew, no deps</div>
+        <div class="kv"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round"/></svg> macOS 13 (Ventura) or later</div>
+      </div>
+      <p class="hero-note" style="margin-top:24px">First launch: right-click Helios → Open → Open (ad-hoc signed, not notarized).</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAQ ===================== -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head"><h2>Questions &amp; answers</h2></div>
+    <div class="faq-list">
+
+      <details class="faq">
+        <summary>Which agents does it work with?</summary>
+        <p>Claude Code, Codex, Gemini, Amp, OpenCode, Cursor — and really any CLI. Each comes with one-tap presets and the right flags. Bring your own keys or logins; Helios just gives each tool a native home and orchestrates them.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Is it really native?</summary>
+        <p>Yes. Real Swift and AppKit, with a libghostty terminal rendered on the GPU. No web view, no Chromium, so it stays fast and light on your battery and RAM.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Do sessions keep running if I close Helios?</summary>
+        <p>Yes. Helios uses a hosted PTY model: the live terminal runs in a separate session host (the <code>heliosd</code> daemon) that owns the real terminal, while the app window is just an attachable client. Close or restart the app and Helios reconnects to the running host and replays the saved output. The daemon also persists its sessions to disk, so they come back even after a reboot. People compare this to tmux because the idea is similar — but Helios implements the host, socket, output log and app integration itself; no tmux required.</p>
+      </details>
+
+      <details class="faq">
+        <summary>What is Sessions MCP?</summary>
+        <p>A local Model Context Protocol server bundled with Helios that lets one session safely inspect and drive its siblings — read output, send a prompt, answer menus, start or close sessions. It's how a single orchestrator agent can run a whole fleet. It's scoped to your current project by default and can be turned off entirely.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Why a terminal, and not a chat UI?</summary>
+        <p>Because the terminal is where these agents actually live. Every provider ships their best work as a CLI and improves it constantly. The moment you wrap a custom chat UI on top, you're building a lowest-common-denominator layer that's always a step behind and hides features. Helios gives each CLI a first-class native home instead — the terminal in full when you want it, out of your way when you don't — plus the dashboard, auto-titling and one-tap launching around it.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Does it cost anything?</summary>
+        <p>No — Helios is free. It will never add cloud services, accounts or telemetry. You bring your own agent keys and run everything locally on your Mac.</p>
+      </details>
+
+      <details class="faq">
+        <summary>Why does the first launch need a right-click?</summary>
+        <p>The app is ad-hoc signed but not notarized, so Gatekeeper asks once. Right-click Helios → Open → Open the first time, and it launches normally after that.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top"><img src="assets/icon.png" alt="Helios" /> Helios</a>
+        <p class="tagline">A native terminal for AI coding agents. Built for Mac. Terminals that never die.</p>
+      </div>
+      <div>
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#mcp">Sessions MCP</a></li>
+          <li><a href="#why">Why Helios</a></li>
+          <li><a href="https://github.com/basionwang-bot/helios/releases/latest/download/Helios.app.zip">Download</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>More</h4>
+        <ul>
+          <li><a href="https://github.com/basionwang-bot/helios/releases">Releases</a></li>
+          <li><a href="https://github.com/basionwang-bot/helios">GitHub</a></li>
+          <li><a href="mailto:basionwang@gmail.com">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Basion Wang · Built for Mac</span>
+      <span>Powered by libghostty · macOS 13+ · Apple Silicon</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
